@@ -1,11 +1,11 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using PasswordStorage.Data.Database.Context;
-using PasswordStorage.Data.Models;
+using PasswordStorage.Data.Entities;
 
 namespace PasswordStorage.Data.Database.Infrastructure.Repository
 {
     public class GenericRepository<TEntity> : IGenericRepository<TEntity>
-        where TEntity : BaseModel
+        where TEntity : BaseEntity
     {
         private readonly PasswordStorageDbContext _dbContext;
         public readonly DbSet<TEntity> _dbSet;

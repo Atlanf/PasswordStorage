@@ -1,8 +1,8 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace PasswordStorage.Data.Models
+namespace PasswordStorage.Data.Entities
 {
-    public class BaseModel
+    public class BaseEntity
     {
         [Required]
         public Guid Id { get; set; }
