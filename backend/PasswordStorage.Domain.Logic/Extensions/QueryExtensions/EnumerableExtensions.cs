@@ -1,4 +1,10 @@
-﻿namespace PasswordStorage.Data.Extensions.Query
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PasswordStorage.Domain.Logic.Extensions.QueryExtensions
 {
     public static class EnumerableExtensions
     {

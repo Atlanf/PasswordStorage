@@ -1,7 +1,11 @@
-﻿using PasswordStorage.Data.Database.Context;
-using PasswordStorage.Data.Entities;
+﻿using PasswordStorage.Data.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace PasswordStorage.Data.Database.Infrastructure.Repository
+namespace PasswordStorage.Domain.Logic.Repository.General.GenericRepository
 {
     public interface IGenericRepository<TEntity>
         where TEntity : BaseEntity
