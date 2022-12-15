@@ -1,6 +1,6 @@
-﻿namespace PasswordStorage.Data.Models
+﻿namespace PasswordStorage.Data.Entities
 {
-    public class StorageItem : BaseModel
+    public class StorageItem : BaseEntity
     {
         public string Name { get; set; }
         public StorageItemType Type { get; set; }

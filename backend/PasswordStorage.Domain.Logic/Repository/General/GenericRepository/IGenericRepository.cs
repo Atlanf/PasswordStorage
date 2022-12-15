@@ -14,6 +14,6 @@ namespace PasswordStorage.Domain.Logic.Repository.General.GenericRepository
         Task<Guid> InsertAsync(TEntity saveEntity);
         Task<Guid> UpdateAsync(TEntity entity);
         IQueryable<TEntity> GetAll();
-        Task DeleteAsync(Guid id);
+        Task DeleteAsync(Guid id, bool softDelete = false);
     }
 }

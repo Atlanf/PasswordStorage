@@ -52,7 +52,7 @@ namespace PasswordStorage.Domain.Logic.Repository.General.GenericRepository
             return _dbSet;
         }
 
-        public virtual async Task DeleteAsync(Guid id)
+        public virtual async Task DeleteAsync(Guid id, bool softDelete = false)
         {
             var entityToDelete = await _dbContext.FindAsync<TEntity>(id);
 
@@ -61,6 +61,14 @@ namespace PasswordStorage.Domain.Logic.Repository.General.GenericRepository
                 throw new KeyNotFoundException("Entity not found");
             }
 
+            if (softDelete == true)
+            {
+                entityToDelete.IsDeleted = true;
+                await this.UpdateAsync(entityToDelete);
+
+                return;
+            }
+            
             if (_dbContext.Entry(entityToDelete).State == EntityState.Detached)
             {
                 _dbSet.Attach(entityToDelete);

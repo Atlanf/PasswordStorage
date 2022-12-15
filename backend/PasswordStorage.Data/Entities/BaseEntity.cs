@@ -7,6 +7,8 @@ namespace PasswordStorage.Data.Entities
         [Required]
         public Guid Id { get; set; }
 
+        public bool? IsDeleted { get; set; }
+
         public void Initialize()
         {
             if (Id == Guid.Empty)

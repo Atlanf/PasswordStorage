@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PasswordStorage.Data.Models;
+using PasswordStorage.Data.Entities;
 
 namespace PasswordStorage.Data.Database.Context
 {
